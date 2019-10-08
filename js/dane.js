@@ -48,12 +48,11 @@ function wyswietlanieDanych(dane) {
     }
 
     // najechanie na button
-    document.getElementsByClassName("alert alert-info").onclick = function () {
-        myFunction()
-    };
-
-    function myFunction() {
+    var z = document.getElementsByClassName("alert alert-info");
+    for(i=0;i<z.length;i++){
+        z[i].onclick = myFunction;
+    }
+}
+function myFunction() {
       alert( 'Hello, world!' );
     }
-
-}
