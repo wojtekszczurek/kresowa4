@@ -39,6 +39,8 @@ function wyswietlanieDanych(dane) {
         var y = document.createElement("div");
         y.className = "alert alert-info";
         y.role = "alert";
+        var napis=dane[i].miesiac.toString();
+        y.addEventListener("click", function() {myFunction(napis);});
         var napis = document.createTextNode(dane[i].rok + "/" + dane[i].miesiac);
         y.appendChild(napis);
         x.appendChild(y);
@@ -47,12 +49,8 @@ function wyswietlanieDanych(dane) {
         // koniec tworzenia listy z miesiącami
     }
 
-    // najechanie na button
-    var z = document.getElementsByClassName("alert alert-info");
-    for(i=0;i<z.length;i++){
-        z[i].onclick = myFunction;
-    }
+    
 }
-function myFunction() {
-      alert( 'Hello, world!' );
+function myFunction(h) {
+      alert(h);
     }
