@@ -23,11 +23,15 @@ and open the template in the editor.
 
     </script>
 
+
+    <script src="js/dane.js"></script>
+
     <title>Strona główna</title>
 
 </head>
 
-<body>
+<body onload="wyswietlanieDanych(dane)">
+
     <nav class="navbar navbar-light bg-light">
         <form class="form-inline">
             <button class="btn btn-outline-success" type="button" data-toggle="modal" data-target="#modalDodawanie">Dodaj rachunki</button>
@@ -81,105 +85,16 @@ and open the template in the editor.
 
     <div class="container">
         <div class="row">
-            <div class="col-sm-8">
+            <div class="col-sm-7">
                 <div class="jumbotron">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Media</th>
-                                <th scope="col">Odczyt</th>
-                                <th scope="col">Poprzedni</th>
-                                <th scope="col">Ilosc</th>
-                                <th scope="col">Cena jedn.</th>
-                                <th scope="col">Cena</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Czynsz</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>700,00 zł.</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Prąd</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Gaz</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td>Woda</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">5</th>
-                                <td>Ścieki</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">6</th>
-                                <td>Kubeł</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>1</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">7</th>
-                                <td class="font-weight-bold">Razem</td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td class="font-weight-bold">1</td>
-                            </tr>
+                    <div id="dane"></div>
 
-                        </tbody>
-                    </table>
+
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-5">
                 <div class="jumbotron">
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <div class="alert alert-primary" role="alert">
-                                2019 styczeń
-                            </div>
-                        </li>
-                        <li class="list-group-item">
-                            <div class="alert alert-danger" role="alert">
-                                2019 luty
-                            </div>
-                        </li>
-                        <li class="list-group-item">Morbi leo risus</li>
-                        <li class="list-group-item">Porta ac consectetur ac</li>
-                        <li class="list-group-item">Vestibulum at eros</li>
+                    <ul class="list-group" id="lista">
                     </ul>
                 </div>
             </div>
